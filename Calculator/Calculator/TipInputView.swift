@@ -1,5 +1,5 @@
 //
-//  LogoView.swift
+//  TipInputView.swift
 //  Calculator
 //
 //  Created by 김은서 on 12/2/23.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class LogoView: UIView {
+class TipInputView: UIView {
     
     init() {
         super.init(frame: .zero)
@@ -20,7 +20,6 @@ class LogoView: UIView {
     }
     
     private func layout() {
-        backgroundColor = .red
+        backgroundColor = .gray
     }
 }
-
