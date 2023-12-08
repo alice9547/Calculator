@@ -28,6 +28,8 @@
 		CA95F49A2B1B329200309F8C /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95F4992B1B329200309F8C /* ThemeColor.swift */; };
 		CA95F49C2B1B329B00309F8C /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95F49B2B1B329B00309F8C /* ThemeFont.swift */; };
 		CA95F49F2B1B32C700309F8C /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95F49E2B1B32C700309F8C /* UIColor+Ext.swift */; };
+		CA95F4A22B1B3FA400309F8C /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CA95F4A12B1B3FA400309F8C /* Then */; };
+		CA95F4AA2B1B43F900309F8C /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95F4A92B1B43F900309F8C /* LabelFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,7 @@
 		CA95F4992B1B329200309F8C /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 		CA95F49B2B1B329B00309F8C /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		CA95F49E2B1B32C700309F8C /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		CA95F4A92B1B43F900309F8C /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA95F4812B1B27C700309F8C /* CombineCocoa in Frameworks */,
+				CA95F4A22B1B3FA400309F8C /* Then in Frameworks */,
 				CA95F4842B1B27D500309F8C /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,11 +128,12 @@
 		CA95F44E2B1B275000309F8C /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				CA95F4A52B1B43AE00309F8C /* factory */,
 				CA95F49D2B1B32B700309F8C /* extension */,
-				CA95F4982B1B328400309F8C /* config */,
+				CA95F4A62B1B43BA00309F8C /* config */,
+				CA95F4A82B1B43CF00309F8C /* view */,
 				CA95F44F2B1B275000309F8C /* AppDelegate.swift */,
 				CA95F4512B1B275000309F8C /* SceneDelegate.swift */,
-				CA95F48D2B1B2A4900309F8C /* View */,
 				CA95F4532B1B275000309F8C /* CalculatorVC.swift */,
 				CA95F4582B1B275100309F8C /* Assets.xcassets */,
 				CA95F45A2B1B275100309F8C /* LaunchScreen.storyboard */,
@@ -161,7 +166,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CA95F48D2B1B2A4900309F8C /* View */ = {
+		CA95F49D2B1B32B700309F8C /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				CA95F49E2B1B32C700309F8C /* UIColor+Ext.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		CA95F4A52B1B43AE00309F8C /* factory */ = {
+			isa = PBXGroup;
+			children = (
+				CA95F4A92B1B43F900309F8C /* LabelFactory.swift */,
+			);
+			path = factory;
+			sourceTree = "<group>";
+		};
+		CA95F4A62B1B43BA00309F8C /* config */ = {
+			isa = PBXGroup;
+			children = (
+				CA95F4992B1B329200309F8C /* ThemeColor.swift */,
+				CA95F49B2B1B329B00309F8C /* ThemeFont.swift */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		CA95F4A82B1B43CF00309F8C /* view */ = {
 			isa = PBXGroup;
 			children = (
 				CA95F48E2B1B2AC900309F8C /* LogoView.swift */,
@@ -170,24 +200,7 @@
 				CA95F4962B1B2C2500309F8C /* SplitInputView.swift */,
 				CA95F4942B1B2C1500309F8C /* TipInputView.swift */,
 			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		CA95F4982B1B328400309F8C /* config */ = {
-			isa = PBXGroup;
-			children = (
-				CA95F4992B1B329200309F8C /* ThemeColor.swift */,
-				CA95F49B2B1B329B00309F8C /* ThemeFont.swift */,
-			);
-			name = config;
-			sourceTree = "<group>";
-		};
-		CA95F49D2B1B32B700309F8C /* extension */ = {
-			isa = PBXGroup;
-			children = (
-				CA95F49E2B1B32C700309F8C /* UIColor+Ext.swift */,
-			);
-			path = extension;
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +222,7 @@
 			packageProductDependencies = (
 				CA95F4802B1B27C700309F8C /* CombineCocoa */,
 				CA95F4832B1B27D500309F8C /* SnapKit */,
+				CA95F4A12B1B3FA400309F8C /* Then */,
 			);
 			productName = Calculator;
 			productReference = CA95F44C2B1B275000309F8C /* Calculator.app */;
@@ -293,6 +307,7 @@
 				CA95F47F2B1B27C700309F8C /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 				CA95F4822B1B27D500309F8C /* XCRemoteSwiftPackageReference "SnapKit" */,
 				CA95F4882B1B27FB00309F8C /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				CA95F4A02B1B3FA400309F8C /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = CA95F44D2B1B275000309F8C /* Products */;
 			projectDirPath = "";
@@ -345,6 +360,7 @@
 				CA95F4502B1B275000309F8C /* AppDelegate.swift in Sources */,
 				CA95F49C2B1B329B00309F8C /* ThemeFont.swift in Sources */,
 				CA95F4522B1B275000309F8C /* SceneDelegate.swift in Sources */,
+				CA95F4AA2B1B43F900309F8C /* LabelFactory.swift in Sources */,
 				CA95F4972B1B2C2500309F8C /* SplitInputView.swift in Sources */,
 				CA95F4952B1B2C1500309F8C /* TipInputView.swift in Sources */,
 			);
@@ -709,6 +725,14 @@
 				minimumVersion = 1.15.1;
 			};
 		};
+		CA95F4A02B1B3FA400309F8C /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -736,6 +760,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CA95F47F2B1B27C700309F8C /* XCRemoteSwiftPackageReference "CombineCocoa" */;
 			productName = CombineCocoa;
+		};
+		CA95F4A12B1B3FA400309F8C /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA95F4A02B1B3FA400309F8C /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
